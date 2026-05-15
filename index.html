@@ -1,13 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MiniMart</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
+
 <body>
-    <h1>hey</h1>
+    <header>
+        <nav>
+            <h1>MiniMart</h1>
+            <div>
+                <button id="cartBtn">Cart</button>
+                <span id="cartCount">0</span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="controalsSection">
+            <div class="controlSection">
+                <input type="text" id="searchInput" class="border-2 border-black rounded" placeholder="Search...">
+                <select id="categoryFilter">
+                    <option value="all" selected>All Categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="jewelery">Jewelery</option>
+                    <option value="men's clothing">Men's Clothing</option>
+                    <option value="women's clothing">Women's Clothing</option>
+                </select>
+                <select id="sortSelect">
+                    <option value="default">Default</option>
+                    <option value="lowToHigh">Low to High</option>
+                    <option value="highToLow">High to Low</option>
+                </select>
+            </div>
+            <div class="statusMessages">
+                <p id="loadingMessage" class="hidden">loading message...</p>
+                <p id="errorMessage" class="hidden"></p>
+            </div>
+        </section>
+        <section id="productSection">
+            <div id="productGrid">
+                <article class="productCard">
+                    <img src="" alt="Product Image" class="productImage">
+                    <h3 class="productTitle">Title</h3>
+                    <p class="productCategory">Category</p>
+                    <p class="productPrice">Price</p>
+                    <div class="productCardBtn">
+                        <button class="detailsBtn">Details</button>
+                        <button class="addToCartBtn">Add to Cart</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <div id="productOverlay">
+        <div class="modalContent">
+            <button id="closeModalBtn">Close</button>
+            <img id="modalImage" src="" alt="Product Image">
+            <h3 id="modalTitle">Title</h3>
+            <h4 id="modalCategory">Category</h4>
+            <p id="modalDescription">Description...</p>
+            <p id="modalPrice">Price</p>
+            <button id="modalAddToCartBtn">Add to Cart</button>
+        </div>
+    </div>
+    <div id="cartOverlay">
+        <div id="cartSidebar">
+            <div id="cartHeader">
+                <h3>Cart</h3>
+                <button id="closeCartBtn">Close</button>
+            </div>
+            <div id="cartItemsContainer">
+                <div class="cartItem">
+                    <h3>Product Title</h3>
+                    <p>Qty: <span>1</span></p>
+                    <p>$10</p>
+                    <button>Remove</button>
+                </div>
+            </div>
+            <div id="cartFooter">
+                <p>Total: <span id="cartTotalPrice">$100</span></p>
+                <button>Checkout</button>
+            </div>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
+
 </html>
