@@ -3,7 +3,7 @@
 A responsive product store built with HTML, Tailwind CSS, and vanilla JavaScript. The app fetches products from the Fake Store API, supports search/filter/sort, shows product details in a modal, and includes a persistent cart using localStorage.
 
 ## Live Demo
-
+[MiniMart](https://a-r-adnan.github.io/MiniMart_API_Store/)
 
 ## Features
 
